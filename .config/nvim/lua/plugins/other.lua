@@ -2,7 +2,14 @@
 -- Nvim Tree
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-require("nvim-tree").setup {}
+require("nvim-tree").setup {
+    sort = {
+      sorter = "extension",
+    },
+    view = {
+      width = 40,
+    },
+}
 
 require("nvim-autopairs").setup {}
 
