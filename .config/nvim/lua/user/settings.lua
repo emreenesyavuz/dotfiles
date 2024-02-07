@@ -1,4 +1,4 @@
--- Modified: Wed 07 Feb 2024 09:04:31 AM CST
+-- Modified: Wed 07 Feb 2024 09:28:52 AM CST
 
 local set = vim.opt
 
@@ -81,21 +81,5 @@ command = "call Timestamp()",
 group = modifiedtime,
 })
 
-vim.cmd [[
-if has('wsl')
-let g:clipboard = {
-    \   'name': 'WslClipboard',
-    \   'copy': {
-        \      '+': 'clip.exe',
-        \      '*': 'clip.exe',
-        \    },
-        \   'paste': {
-            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-            \   },
-            \   'cache_enabled': 0,
-            \ }
-endif
-            ]]
 
 
