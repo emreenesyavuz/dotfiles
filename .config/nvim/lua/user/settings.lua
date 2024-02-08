@@ -1,4 +1,4 @@
--- Modified: Wed 07 Feb 2024 09:30:30 AM CST
+-- Modified: Thu 08 Feb 2024 08:14:49 AM CST
 
 local set = vim.opt
 
@@ -9,6 +9,7 @@ set.spellsuggest = "best, 9"
 -- Dictionary for spell check
 set.dictionary:append('/usr/share/dict/words')
 
+set.conceallevel = 3
 
 -- Cursorline
 set.cursorline = true
